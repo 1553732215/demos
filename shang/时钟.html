@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			body{
+				background: black;
+			}
+			
+			p{
+				text-align: center;
+				margin-top: 200px;
+				font-size:200px;
+				color: red;
+			}
+		</style>
+	</head>
+
+	<script type="text/javascript">
+		window.onload=function(){
+		/*	function abc(n){
+				if(n<10){
+					return '0'+n;
+				}else{
+					return n;
+				}
+			}
+			var oP=document.getElementById('op');
+			var timer  = null;
+			clearInterval(timer);
+			timer=setInterval(function(){
+				var oDate=new Date();
+				var h=oDate.getHours();
+				var m=oDate.getMinutes();
+				var s=oDate.getSeconds();
+				oP.innerHTML=abc(h)+':'+abc(m)+':'+abc(s);
+			},1000)
+		*/
+	    function xrv(n){
+			if(n<10){
+				return '0'+n;
+			}else{
+				return n;
+			}
+		}
+	    var oP=document.getElementById('op')
+		var timer=null;
+		clearInterval(timer);
+		function abc(){
+			var oDate=new Date();
+			var h=oDate.getHours();
+			var m=oDate.getMinutes();
+			var s=oDate.getSeconds();
+			oP.innerHTML=xrv(h)+':'+xrv(m)+':'+xrv(s);
+		}
+		abc();
+		timer=setInterval(abc,1000);
+		
+		
+	    }
+	</script>
+	<body>
+		<p id="op">00:00:00</p>
+	</body>
+</html>
